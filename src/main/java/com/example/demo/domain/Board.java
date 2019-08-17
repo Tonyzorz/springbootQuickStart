@@ -26,7 +26,7 @@ public class Board {
 	
 	private String content;
 	
-	@Column(insertable=false, updatable=false,columnDefinition="date default sysdate")
+	@Column(insertable=false, updatable=false,columnDefinition="DATE DEFAULT CURRENT_DATE")
 	private Date createDate;
 	
 	@Column(insertable=false, updatable=false, columnDefinition="number default 0")

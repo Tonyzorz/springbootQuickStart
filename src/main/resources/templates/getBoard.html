@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-eqiuv="Content-Type" content="text/html"; charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body th:align="center">
+<h1>게시글 상세</h1>
+<form th:action="@{updateBoard}" method="post">
+<input type="hidden" name="seq" th:value="${board.seq}">
+<table th:align="center" border="1" th:cellspacing="0" th:cellpadding="0">
+	<tr>
+		<td bgcolor="orange" th:text="title" width="80"></td>
+		<td th:align="left"><input type="text" name="title" th:value="${board.title}"></td>
+	</tr>
+	<tr>
+		<td bgcolor="orange" th:text="writer"></td>
+		<td th:align="left" th:text="${board.writer}"></td>
+	</tr>
+	<tr>
+		<td bgcolor="orange" th:text="content"></td>
+		<td th:align="left"><textarea name="content" th:text="${board.content}" cols="40" rows="10"></textarea></td>
+	</tr>
+	<tr>
+		<td bgcolor="orange" th:text="date"></td>
+		<td th:align="left" th:text="${#dates.format(board.createDate, 'yyyy-MM-dd')}"></td>
+	</tr>
+	<tr>
+		<td bgcolor="orange" th:text="hit"></td>
+		<td th:align="left" th:text="${board.cnt}"></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+			<input type="submit" value="update your post">
+		</td>
+	</tr>
+	
+</table>
+</form>
+<a th:href="@{/insertBoard}">register post</a>&nbsp;&nbsp;&nbsp;
+<a th:href="@{/deleteBoard(seq=${board.seq})}">delete</a>&nbsp;&nbsp;&nbsp;
+<a th:href="@{/getBoardList}">forum list</a>
+</body>
+</html>

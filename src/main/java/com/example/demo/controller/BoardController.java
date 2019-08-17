@@ -72,6 +72,12 @@ public class BoardController {
 		return "forward:getBoardList";
 	}
 	
+	@GetMapping("/hello")
+	public void hello(Model model) {
+		model.addAttribute("greeting", "Hello, im using my first thymeleaf");
+		
+	}
+	
 	
 	
 }

@@ -14,7 +14,7 @@
 		<h1>게시글 상세</h1>
 		<hr>
 		<form action="updateBoard" method="post">
-			<input name="seq" type="hidden" value="${board.seq }">
+		<input name="seq" type="hidden" value="${board.seq }">
 			<table border="1" cellpadding="0" cellspacing="0">
 				<tr>
 					<td bgcolor="orange" width="70">title</td>
