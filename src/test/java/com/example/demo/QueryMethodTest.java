@@ -72,16 +72,16 @@ public class QueryMethodTest {
 //			System.out.println(board.toString());
 //		}
 //	}
-	@Test
-	public void testByTitleContainingPaging() {
-		Pageable paging = PageRequest.of(0, 5, Sort.Direction.DESC, "seq");
-		List<Board> boardList = boardRepo.findByTitleContaining("test", paging);
-		
-		System.out.println("titlecontainingnginginpaginginginginging");
-		for(Board board : boardList) {
-			System.out.println(board.toString());
-		}
-	}
+//	@Test
+//	public void testByTitleContainingPaging() {
+//		Pageable paging = PageRequest.of(0, 5, Sort.Direction.DESC, "seq");
+//		List<Board> boardList = boardRepo.findByTitleContaining("test", paging);
+//		
+//		System.out.println("titlecontainingnginginpaginginginginging");
+//		for(Board board : boardList) {
+//			System.out.println(board.toString());
+//		}
+//	}
 	
 //	@Test
 //	public void testFindByTitleContaining() {
@@ -100,46 +100,46 @@ public class QueryMethodTest {
 //		}
 //	}
 	
-	@Test
-	public void testQueryAnnotationTest1() {
-		List<Board> boardList = boardRepo.queryAnnotationTest1("test10");
-		
-		System.out.println("search result");
-		for(Board board : boardList) {
-			System.out.println(board.toString());
-		}
-		
-	}
-	
-	@Test
-	public void testQueryAnnotationTest2() {
-		List<Object[]> boardList = boardRepo.queryAnnotationTest2("test11");
-		System.out.println("testqueryannotationtest2");
-		
-		for(Object[] row : boardList) {
-			System.out.println(Arrays.toString(row));
-		}
-	}
-	
-	@Test
-	public void testQueryAnnotationTest3() {
-		List<Object[]> boardList = boardRepo.queryAnnotationTest3("test10");
-		System.out.println("testqueryannotationtest33333");
-		
-		for(Object[] row : boardList) {
-			System.out.println(Arrays.toString(row));
-		}
-	}
-	
-	@Test
-	public void testQueryAnnotationTest4() {
-		Pageable paging = PageRequest.of(0, 3, Sort.Direction.DESC, "seq");
-		List<Board> boardList = boardRepo.queryAnnotationTest4(paging);
-		System.out.println("testqueryannotation4444");
-		
-		for(Board board : boardList) {
-			System.out.println(board.toString());
-		}
-		
-	}
+//	@Test
+//	public void testQueryAnnotationTest1() {
+//		List<Board> boardList = boardRepo.queryAnnotationTest1("test10");
+//		
+//		System.out.println("search result");
+//		for(Board board : boardList) {
+//			System.out.println(board.toString());
+//		}
+//		
+//	}
+//	
+//	@Test
+//	public void testQueryAnnotationTest2() {
+//		List<Object[]> boardList = boardRepo.queryAnnotationTest2("test11");
+//		System.out.println("testqueryannotationtest2");
+//		
+//		for(Object[] row : boardList) {
+//			System.out.println(Arrays.toString(row));
+//		}
+//	}
+//	
+//	@Test
+//	public void testQueryAnnotationTest3() {
+//		List<Object[]> boardList = boardRepo.queryAnnotationTest3("test10");
+//		System.out.println("testqueryannotationtest33333");
+//		
+//		for(Object[] row : boardList) {
+//			System.out.println(Arrays.toString(row));
+//		}
+//	}
+//	
+//	@Test
+//	public void testQueryAnnotationTest4() {
+//		Pageable paging = PageRequest.of(0, 3, Sort.Direction.DESC, "seq");
+//		List<Board> boardList = boardRepo.queryAnnotationTest4(paging);
+//		System.out.println("testqueryannotation4444");
+//		
+//		for(Board board : boardList) {
+//			System.out.println(board.toString());
+//		}
+//		
+//	}
 }
