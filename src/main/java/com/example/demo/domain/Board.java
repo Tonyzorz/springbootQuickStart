@@ -26,9 +26,9 @@ public class Board {
 	
 	private String content;
 	
-	@Column(insertable=false, updatable=false,columnDefinition="DATE DEFAULT CURRENT_DATE")
+	@Column(insertable=false, updatable=false,columnDefinition="TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP")
 	private Date createDate;
 	
-	@Column(insertable=false, updatable=false, columnDefinition="number default 0")
+	@Column(insertable=false, updatable=false, columnDefinition="int default 0")
 	private Long cnt;
 }
