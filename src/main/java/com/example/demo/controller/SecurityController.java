@@ -26,4 +26,9 @@ public class SecurityController {
 	public void forAdmin() {
 		System.out.println("this is member");
 	}
+	
+	@GetMapping("/accessDenied")
+	public void accessDenied() {
+		
+	}
 }
